@@ -7,8 +7,11 @@ import pygame.display
 from pygame import Surface, Rect
 from pygame.font import Font
 
+from Code.Enemy import Enemy
 from Code.Entity import Entity
 from Code.EntityFactory import EntityFactory
+from Code.EntityMediator import EntityMediator
+from Code.Player import Player
 from Code.const import COLOR_WHITE, MENU_OPTION, EVENT_ENEMY
 
 
@@ -29,14 +32,33 @@ class Level:
 
     def run(self):
         pygame.mixer_music.load(f"./Assets/{self.name}.wav")
+        pygame.mixer_music.set_volume(0.3)
         pygame.mixer_music.play(-1)
         clock = pygame.time.Clock()
         while True:
             clock.tick(60)
+
+            # desenhar entidades
             for ent in self.entity_List:
                 self.window.blit(source=ent.surf, dest=ent.rect)  # desenho de entidades
-                #self.level_text(20, f'fps:{clock.get_fps():.0f}', COLOR_WHITE, (10, 10))
                 ent.Move()
+                if isinstance(ent, (Player, Enemy)):
+                    shoot = ent.shoot()
+                    if shoot is not None:
+                        self.entity_List.append(shoot)
+
+            # printar fps
+            self.level_text(20, f'fps:{clock.get_fps():.0f}', COLOR_WHITE, (10, 10))
+            self.level_text(20, f'Entidades:{len(self.entity_List)}', COLOR_WHITE, (10, 30))
+
+            # Verificar relacionamentos
+            EntityMediator.verify_collision(entity_list=self.entity_List)
+            EntityMediator.verify_health(entity_list=self.entity_List)
+
+            # atualizar tela
+            pygame.display.flip()
+
+            # Conferir eventos
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -44,7 +66,7 @@ class Level:
                 if event.type == EVENT_ENEMY:
                     choice = random.choice(('Enemy1', 'Enemy2'))
                     self.entity_List.append(EntityFactory.get_entity(choice))
-            pygame.display.flip()
+
         pass
 
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
