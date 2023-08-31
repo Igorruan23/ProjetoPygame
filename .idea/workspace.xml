@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ab6c0d4-8843-4aee-a850-43f4dcbb65a5" name="Changes" comment="text Menu">
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Enemy1Shot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Enemy2Shot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player1Shot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Player2Shot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/EnemyShot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/EntityMediator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/PlayerShot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Enemy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Entity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/EntityFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/EntityFactory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Level.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/const.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/const.py" afterDir="false" />
     </list>
@@ -33,7 +35,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="aula02" />
+        <entry key="$PROJECT_DIR$" value="Aula03" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -125,7 +127,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Aula03" />
+                        <option value="Aula04" />
                       </list>
                     </value>
                   </entry>
@@ -140,5 +142,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="text Menu" />
     <option name="LAST_COMMIT_MESSAGE" value="text Menu" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Code/PlayerShot.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
