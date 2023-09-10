@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ab6c0d4-8843-4aee-a850-43f4dcbb65a5" name="Changes" comment="text Menu">
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy1Shot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Enemy2Shot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player1Shot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Player2Shot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/EnemyShot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/EntityMediator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/PlayerShot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Enemy.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Enemy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/EntityFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/EntityFactory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/EntityMediator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/EntityMediator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Level.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Level.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/const.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/const.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Aula03" />
+        <entry key="$PROJECT_DIR$" value="Aula04" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

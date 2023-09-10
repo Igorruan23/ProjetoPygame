@@ -12,7 +12,7 @@ from Code.Entity import Entity
 from Code.EntityFactory import EntityFactory
 from Code.EntityMediator import EntityMediator
 from Code.Player import Player
-from Code.const import COLOR_WHITE, MENU_OPTION, EVENT_ENEMY
+from Code.const import COLOR_WHITE, MENU_OPTION, EVENT_ENEMY, WIN_HEIGHT, COLOR_YELLOW
 
 
 class Level:
@@ -28,7 +28,7 @@ class Level:
         elif menu_option == MENU_OPTION[1] or MENU_OPTION[2]:
             self.entity_List.append(EntityFactory.get_entity('Player1'))
             self.entity_List.append(EntityFactory.get_entity('Player2'))
-        pygame.time.set_timer(EVENT_ENEMY, 2000)
+        pygame.time.set_timer(EVENT_ENEMY, 1000)
 
     def run(self):
         pygame.mixer_music.load(f"./Assets/{self.name}.wav")
@@ -46,10 +46,14 @@ class Level:
                     shoot = ent.shoot()
                     if shoot is not None:
                         self.entity_List.append(shoot)
+                if ent.name == 'Player1':
+                    self.level_text(20, f'Player1 - Health {ent.health}||Score: {ent.score}',COLOR_YELLOW, (10, 10))
+                if ent.name == 'Player2':
+                    self.level_text(20, f'Player2 - Health {ent.health}||Score: {ent.score}',COLOR_YELLOW, (10, 30))
 
             # printar fps
-            self.level_text(20, f'fps:{clock.get_fps():.0f}', COLOR_WHITE, (10, 10))
-            self.level_text(20, f'Entidades:{len(self.entity_List)}', COLOR_WHITE, (10, 30))
+            self.level_text(20, f'fps:{clock.get_fps():.0f}', COLOR_WHITE, (10, WIN_HEIGHT-35))
+            self.level_text(20, f'Entidades:{len(self.entity_List)}', COLOR_WHITE, (10, WIN_HEIGHT-20))
 
             # Verificar relacionamentos
             EntityMediator.verify_collision(entity_list=self.entity_List)
