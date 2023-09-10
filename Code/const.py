@@ -15,6 +15,9 @@ WIN_WIDTH = 576
 WIN_HEIGHT = 324
 
 # E
+
+
+
 ENTITY_SPEED = {'LVLBG00': 0,
                 'LVLBG01': 1,
                 'LVLBG02': 2,
@@ -39,20 +42,52 @@ ENTITY_HEALTH = {'LVLBG00': 999,
                  'LVLBG04': 999,
                  'LVLBG05': 999,
                  'LVLBG06': 999,
-                 'Player1': 300,
-                 'Player2': 300,
+                 'Player1': 200,
+                 'Player2': 200,
                  'Player1Shot': 1,
                  'Player2Shot': 1,
-                 'Enemy1': 200,
-                 'Enemy2': 200,
-                 'Enemy1Shot': 200,
-                 'Enemy2Shot': 200}
+                 'Enemy1': 50,
+                 'Enemy2': 40,
+                 'Enemy1Shot': 1,
+                 'Enemy2Shot': 1}
+
+ENTITY_DAMAGE = {'LVLBG00': 0,
+                 'LVLBG01': 0,
+                 'LVLBG02': 0,
+                 'LVLBG03': 0,
+                 'LVLBG04': 0,
+                 'LVLBG05': 0,
+                 'LVLBG06': 0,
+                 'Player1': 1,
+                 'Player2': 1,
+                 'Player1Shot': 25,
+                 'Player2Shot': 20,
+                 'Enemy1': 1,
+                 'Enemy2': 1,
+                 'Enemy1Shot': 20,
+                 'Enemy2Shot': 20}
+
+ENTITY_SCORE = {'LVLBG00': 0,
+                 'LVLBG01': 0,
+                 'LVLBG02': 0,
+                 'LVLBG03': 0,
+                 'LVLBG04': 0,
+                 'LVLBG05': 0,
+                 'LVLBG06': 0,
+                 'Player1': 0,
+                 'Player2': 0,
+                 'Player1Shot': 0,
+                 'Player2Shot': 0,
+                 'Enemy1': 100,
+                 'Enemy2': 110,
+                 'Enemy1Shot': 0,
+                 'Enemy2Shot': 0}
 
 # intervalo de criação de tiro
-ENTITY_SHOT_DELAY = {'Player1': 50,
-                     'Player2': 60,
-                     'Enemy1': 50,
-                     'Enemy2': 80
+ENTITY_SHOT_DELAY = {'Player1': 30,
+                     'Player2': 20,
+                     'Enemy1': 100,
+                     'Enemy2': 100
                      }
 
 EVENT_ENEMY = pygame.USEREVENT + 1
